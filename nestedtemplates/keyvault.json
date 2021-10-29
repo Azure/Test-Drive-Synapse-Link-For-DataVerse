@@ -1,0 +1,87 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "keyVaultName": {
+        "type": "string",
+        "metadata": {
+          "description": "Specifies the name of the key vault."
+        }
+      },
+      "location": {
+        "type": "string",
+        "metadata": {
+          "description": "Specifies the Azure location where the key vault should be created."
+        }
+      },
+    "datalakeAccountAccessKeyValue": {
+        "type": "securestring"
+    },
+    "sqlAdministratorLoginPassword": {
+      "type": "securestring",
+      "metadata": {
+          "description": "Your password must be at least 8 characters in length. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.) Your password cannot contain all or part of the login name. Part of a login name is defined as three or more consecutive alphanumeric characters."
+      }
+     }
+    },
+
+    "variables": {
+        "sqlSecretName": "synapseSqlLoginPassword",
+        "sqlSecretValue": "[parameters('sqlAdministratorLoginPassword')]",
+        "adlsSecretName": "adlsAccessKey",
+        "adlsSecretValue": "[parameters('datalakeAccountAccessKeyValue')]",
+        "tenantId": "[subscription().tenantId]"
+    },
+
+    "resources": [
+      {
+        "type": "Microsoft.KeyVault/vaults",
+        "apiVersion": "2019-09-01",
+        "name": "[parameters('keyVaultName')]",
+        "location": "[parameters('location')]",
+        "properties": {
+          "tenantId": "[variables('tenantId')]",
+          "enableSoftDelete": false,
+          "accessPolicies": [],
+          "sku": {
+            "name": "Standard",
+            "family": "A"
+          },
+          "networkAcls": {
+            "defaultAction": "Allow",
+            "bypass": "AzureServices"
+          }
+        }
+      },
+      {
+        "type": "Microsoft.KeyVault/vaults/secrets",
+        "apiVersion": "2019-09-01",
+        "name": "[concat(parameters('keyVaultName'), '/', variables('sqlSecretName'))]",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
+        ],
+        "properties": {
+          "value": "[variables('sqlSecretValue')]"
+        }
+      },
+      {
+        "type": "Microsoft.KeyVault/vaults/secrets",
+        "apiVersion": "2019-09-01",
+        "name": "[concat(parameters('keyVaultName'), '/', variables('adlsSecretName'))]",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
+        ],
+        "properties": {
+          "value": "[variables('adlsSecretValue')]"
+        }
+      }
+    ],
+    "outputs": {
+      "dbSecretUri": {
+          "type": "string",
+          "value": "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
+      }
+  }
+  }
