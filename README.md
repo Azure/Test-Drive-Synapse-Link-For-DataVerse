@@ -5,6 +5,24 @@ This 1-click deployment allows the user to deploy a Proof-of-Concept environment
 
 Owner role (or Contributor roles) for the Azure Subscription the template being deployed in. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept. Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for RBAC role-assignments.
 
+## Access a Dynamics Trial Environment
+
+1. Navigate to the [Dynamics 365 Trial Site](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/).
+
+2. Select **Try for free** for *Dynamics 365 Sales*.
+
+3. Enter your work or school email and select **Start your free trial**.
+
+4. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
+
+5. In the top right corner, select the **Environment** to open a right pane with all the environments.
+
+6. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
+
+7. Select **+ New link** and make note of the region required for deploying the Azure resources in the next steps.
+
+![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/7.gif)
+
 ## Deployment Steps
 1. Fork out [this github repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click) into your github account. 
     
