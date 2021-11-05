@@ -21,7 +21,7 @@ Owner role (or Contributor roles) for the Azure Subscription the template being 
 
 7. Select **+ New link** and make note of the region required for deploying the Azure resources in the next steps.
 
-![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/7.gif)
+![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/Access-PPMC-for-Sales-Trial.gif)
 
 ## Deployment Steps
 1. Fork out [this github repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click) into your github account. 
