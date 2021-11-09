@@ -3,6 +3,8 @@ This 1-click deployment allows the user to deploy a Proof-of-Concept environment
 
 ## Prerequisites
 
+If you are an internal Microsoft employee, you must complete the prerequisites in this internal [guide](https://microsoft-my.sharepoint.com/:w:/p/zakisama/EaK-FYDo3JxMvleN7mAKDVsB0_1_PoMWRj8tBxQE9TjoOg?e=o6w9ti).
+
 Owner role (or Contributor roles) for the Azure Subscription the template being deployed in. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept. Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for RBAC role-assignments.
 
 ## Access a Dynamics Trial Environment
@@ -13,6 +15,8 @@ Owner role (or Contributor roles) for the Azure Subscription the template being 
 
 3. Enter your work or school email and select **Start your free trial**.
 
+![D365](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/d365-trial.gif)
+
 4. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
 
 5. In the top right corner, select the **Environment** to open a right pane with all the environments.
@@ -21,7 +25,7 @@ Owner role (or Contributor roles) for the Azure Subscription the template being 
 
 7. Select **+ New link** and make note of the region required for deploying the Azure resources in the next steps.
 
-![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/Access-PPMC-for-Sales-Trial.gif)
+![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/ppac-video.gif)
 
 ## Deployment Steps
 1. Fork out [this github repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click) into your github account. 
