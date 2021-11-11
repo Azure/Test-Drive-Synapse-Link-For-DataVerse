@@ -12,11 +12,14 @@ Owner role (or Contributor roles) for the Azure Subscription is required to depl
 1. Navigate to the [Dynamics 365 Trial Site](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/).
 2. Select **Try for free** for *Dynamics 365 Sales*.
 3. Enter your work or school email and select **Start your free trial**.For Internal Microsoft its the email from the prerequisite step.
+
 ![D365](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/d365-trial.gif)
+
 4. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
 5. In the top right corner, select the **Environment** to open a right pane with all the environments.
 6. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
 7. Select **+ New link** and make note of the region required for deploying the Azure resources in the next steps.
+
 ![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/ppac-video.gif)
 
 ## Deployment Steps
