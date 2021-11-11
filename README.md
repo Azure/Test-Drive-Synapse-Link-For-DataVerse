@@ -10,21 +10,13 @@ Owner role (or Contributor roles) for the Azure Subscription is required to depl
 ## Access a Dynamics Trial Environment
 
 1. Navigate to the [Dynamics 365 Trial Site](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/).
-
 2. Select **Try for free** for *Dynamics 365 Sales*.
-
 3. Enter your work or school email and select **Start your free trial**.For Internal Microsoft its the email from the prerequisite step.
-
 ![D365](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/d365-trial.gif)
-
 4. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
-
 5. In the top right corner, select the **Environment** to open a right pane with all the environments.
-
 6. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
-
 7. Select **+ New link** and make note of the region required for deploying the Azure resources in the next steps.
-
 ![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/ppac-video.gif)
 
 ## Deployment Steps
@@ -33,7 +25,6 @@ Owner role (or Contributor roles) for the Azure Subscription is required to depl
    **If you don't fork repo:** 
    + **The pre-populated dataset, pipeline and notebook will not be deployed**
    + **You will get a Github publishing error**
-   
    
   <!--  ![Fork](https://raw.githubusercontent.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/main/images/4.gif) -->
  
@@ -79,26 +70,30 @@ Following resources are deployed with this template along with some RBAC role as
 <!-- The data pipeline inside the Synapse Workspace gets New York Taxi trip and fare data, joins them and perform aggregations on them to give the final aggregated results. Other resources include datasets, linked services and dataflows. All resources are completely parameterized and all the secrets are stored in the key vault. These secrets are fetched inside the linked services using key vault linked service. The Logic App will check for Active Queries. If there are active queries, it will wait 5 minutes and check again until there are none before pausing -->
 
 ## Post Deployment
-- Current Azure user needs to have ["Storage Blob Data Contributor" role access](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-add-admin#azure-rbac-role-assignments-on-the-workspaces-primary-storage-account) to recently created Azure Data Lake Storage Gen2 account to avoid 403 type permission errors.
-- After the deployment is complete, click 'Go to resource group'.
-- You'll see all the resources deployed in the resource group.
-- Click on the newly deployed Synapse workspace.
-- Click on link 'Open' inside the box labelled as 'Open Synapse Studio'.
-- Click on 'Log into Github' after workspace is opened. Provide your credentials for the github account holding the forked out repository.
-- After logging in into your github account, click on 'Integrate' icon in the left panel. A blade will appear from right side of the screen.
-- Make sure that 'main' branch is selected as 'Working branch' and click 'Save'.
+1. Current Azure user needs to have ["Storage Blob Data Contributor" role access](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-add-admin#azure-rbac-role-assignments-on-the-workspaces-primary-storage-account) to recently created Azure Data Lake Storage Gen2 account to avoid 403 type permission errors.
+2. After the deployment is complete, click 'Go to resource group'.
+3. You'll see all the resources deployed in the resource group.
+4. Click on the newly deployed Synapse workspace.
+5. Click on link 'Open' inside the box labelled as 'Open Synapse Studio'.
+6. Click on 'Log into Github' after workspace is opened. Provide your credentials for the github account holding the forked out repository.
+7. After logging in into your github account, click on 'Integrate' icon in the left panel. A blade will appear from right side of the screen.
+8. Make sure that 'main' branch is selected as 'Working branch' and click 'Save'.
 
 ![PostDeployment-1](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/1.gif)
 
-- Now open the pipeline named 'TripFaresDataPipeline'.
-- Click on 'Parameters' tab at bottom of the window.
-- Update the following parameter values. ___(You can copy the resource names from the resource group recently deployed.)___
-    - SynapseWorkspaceName  (Make sure workspace name is fully qualified domain name, i.e. workspaceName.database.windows.net)
-    - SQLDedicatedPoolName
-    - SQLLoginUsername
-    - KeyVaultName
-    - DatalakeAccountName
-
+#### Configuring Synapse Link for Dataverse
+1. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
+2. In the top right corner, select the **Environment** to open a right pane with all the environments.
+3. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
+4. Select **+ New link** and check "Connect to Your Azure Synapse Analytics Workspace"
+5. Select Subscription,Resource Group and Storage account the package was deployed in previous deployment step.Click Next.
+6. Slect the following tables to be exported through Synapse Link and click Save.
+     - Account
+     - Contact
+     - Lead
+     - Opportunity
+7. On completion the selected tables should show up as synced.
+8. Select the following tables to be exported through Synapse Link and click Save.
 ![PostDeployment-2](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/2.gif)
 
 - After the parameters are updated, click on 'Commit all'.
