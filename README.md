@@ -1,11 +1,11 @@
-## Azure Synapse 1-click POC environment with pre-populated dataset, pipeline, notebook
-This 1-click deployment allows the user to deploy a Proof-of-Concept environment of Azure Synapse Analytics with dataset (New York Taxi Trips & Fares data), pipeline to (ingest, merge, aggregate), 	notebook (Spark ML prediction)
+## Azure Synapse Link For Dataverse POC environment Setup
+This deployment package allows the user to deploy a Proof-of-Concept environment of Azure Synapse Analytics link for Dataverse with spark notebook to (ingest, merge, aggregate and transform) dataset.
 
 ## Prerequisites
 
-If you are an internal Microsoft employee, you must complete the prerequisites in this internal [Guide](https://microsoft.sharepoint.com/:w:/t/Analytics-TechStrategy-Team/EcHBx8uEk6VOvYEUVW3m3yQBCeHwW-A3L2hzfk-ZrZmTKg?e=fY4eOy).
+If you are an internal Microsoft employee, you must complete the prerequisites in this internal [Guide] before proceeding to next steps (https://microsoft.sharepoint.com/:w:/t/Analytics-TechStrategy-Team/EcHBx8uEk6VOvYEUVW3m3yQBCeHwW-A3L2hzfk-ZrZmTKg?e=fY4eOy)
 
-Owner role (or Contributor roles) for the Azure Subscription the template being deployed in. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept. Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for RBAC role-assignments.
+Owner role (or Contributor roles) for the Azure Subscription is required to deploy the template. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept. Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for RBAC role-assignments.
 
 ## Access a Dynamics Trial Environment
 
