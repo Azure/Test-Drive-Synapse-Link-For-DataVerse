@@ -13,7 +13,7 @@ Owner role (or Contributor roles) for the Azure Subscription is required to depl
 
 2. Select **Try for free** for *Dynamics 365 Sales*.
 
-3. Enter your work or school email and select **Start your free trial**.
+3. Enter your work or school email and select **Start your free trial**.For Internal Microsoft its the email from the prerequisite step.
 
 ![D365](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/d365-trial.gif)
 
