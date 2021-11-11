@@ -3,7 +3,7 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
 
 ## Prerequisites
 
-If you are an internal Microsoft employee, you must complete the prerequisites in this internal [Guide](https://microsoft.sharepoint.com/:w:/t/Analytics-TechStrategy-Team/EcHBx8uEk6VOvYEUVW3m3yQBCeHwW-A3L2hzfk-ZrZmTKg?e=fY4eOy)
+If you are an internal Microsoft employee, you must complete the prerequisites in this internal [Guide](https://microsoft.sharepoint.com/:w:/t/Analytics-TechStrategy-Team/EcHBx8uEk6VOvYEUVW3m3yQBCeHwW-A3L2hzfk-ZrZmTKg?e=fY4eOy) before proceeding to next steps.
 
 Owner role (or Contributor roles) for the Azure Subscription is required to deploy the template. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept. Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for RBAC role-assignments.
 
