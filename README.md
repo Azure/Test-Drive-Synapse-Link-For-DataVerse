@@ -28,7 +28,7 @@ Owner role (or Contributor roles) for the Azure Subscription is required to depl
 ![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/ppac-video.gif)
 
 ## Deployment Steps
-1. Fork out [this github repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click) into your github account. 
+1.  ## Fork Out [This GitHub Repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click) into your github account. 
     
    **If you don't fork repo:** 
    + **The pre-populated dataset, pipeline and notebook will not be deployed**
