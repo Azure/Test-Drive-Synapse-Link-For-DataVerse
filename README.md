@@ -96,12 +96,7 @@ Following resources are deployed with this template along with some RBAC role as
      - Lead
      - Opportunity
 7. On completion the selected tables should show up as synced.
-8. Select the following tables to be exported through Synapse Link and click Save.
-![PostDeployment-2](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/2.gif)
 
-- After the parameters are updated, click on 'Commit all'.
-- After successful commit, click 'Publish'. A blade will appear from right side of the window.
-- Click 'Ok'.
 
 ![PostDeployment-3](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/3.gif)
 
