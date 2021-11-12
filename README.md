@@ -57,7 +57,7 @@ Owner role (or Contributor roles) for the Azure Subscription is required to depl
    - Click 'Review + Create'.
    - On successful validation, click 'Create'.
 
-## Azure Services being deployed
+#### 3A-Azure Services being deployed
 This template deploys necessary resources to run an Azure Synapse Proof-of-Concept. 
 Following resources are deployed with this template along with some RBAC role assignments:
 
@@ -84,7 +84,7 @@ Following resources are deployed with this template along with some RBAC role as
 
 ![PostDeployment-1](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/1.gif)
 
-#### Configuring Synapse Link for Dataverse
+#### 4A-Configuring Synapse Link for Dataverse
 1. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
 2. In the top right corner, select the **Environment** to open a right pane with all the environments.
 3. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
