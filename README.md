@@ -1,13 +1,13 @@
 ## Azure Synapse Link For Dataverse POC environment Setup
 This deployment package allows the user to deploy a Proof-of-Concept environment of Azure Synapse Analytics link for Dataverse with spark notebook to (ingest, merge, aggregate and transform) dataset.
 
-## Prerequisites
+## 1-Prerequisites
 
 If you are an internal Microsoft employee, you must complete the prerequisites in this internal [Guide](https://microsoft.sharepoint.com/:w:/t/Analytics-TechStrategy-Team/EcHBx8uEk6VOvYEUVW3m3yQBCeHwW-A3L2hzfk-ZrZmTKg?e=fY4eOy) before proceeding to next steps.
 
 Owner role (or Contributor roles) for the Azure Subscription is required to deploy the template. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept. Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for RBAC role-assignments.
 
-## Access a Dynamics Trial Environment
+## 2-Access a Dynamics Trial Environment
 
 1. Navigate to the [Dynamics 365 Trial Site](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/).
 2. Select **Try for free** for *Dynamics 365 Sales*.
@@ -22,7 +22,7 @@ Owner role (or Contributor roles) for the Azure Subscription is required to depl
 
 ![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/ppac-video.gif)
 
-## Deployment Steps
+## 3-Deployment Steps
 1.  ## Fork Out [This GitHub Repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click) into your github account. 
     
    **If you don't fork repo:** 
@@ -72,7 +72,7 @@ Following resources are deployed with this template along with some RBAC role as
 
 <!-- The data pipeline inside the Synapse Workspace gets New York Taxi trip and fare data, joins them and perform aggregations on them to give the final aggregated results. Other resources include datasets, linked services and dataflows. All resources are completely parameterized and all the secrets are stored in the key vault. These secrets are fetched inside the linked services using key vault linked service. The Logic App will check for Active Queries. If there are active queries, it will wait 5 minutes and check again until there are none before pausing -->
 
-## Post Deployment
+## 4-Post Deployment
 1. Current Azure user needs to have ["Storage Blob Data Contributor" role access](https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-add-admin#azure-rbac-role-assignments-on-the-workspaces-primary-storage-account) to recently created Azure Data Lake Storage Gen2 account to avoid 403 type permission errors.
 2. After the deployment is complete, click 'Go to resource group'.
 3. You'll see all the resources deployed in the resource group.
