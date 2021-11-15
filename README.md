@@ -90,15 +90,18 @@ Following resources are deployed with this template along with some RBAC role as
 3. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
 4. Select **+ New link** and check "Connect to Your Azure Synapse Analytics Workspace"
 5. Select Subscription,Resource Group and Storage account the package was deployed in previous deployment step.Click Next.
-6. Slect the following tables to be exported through Synapse Link and click Save.
+6. Select the following tables to be exported through Synapse Link and click Save.
      - Account
      - Contact
      - Lead
      - Opportunity
 7. On completion the selected tables should show up as synced.
+8. Same tables can be seen and accessed thorough Synapse workspace.
 
 
-![PostDeployment-3](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/3.gif)
+![Configure-Link](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/Configure_DV_Link.gif)
+
+# Contents in Draft Mode below this
 
 - Now to trigger the pipeline, click 'Add trigger' at the top panel and click 'Trigger now'.
 - Confirm the pipeline parameters' values and click 'Ok'.
