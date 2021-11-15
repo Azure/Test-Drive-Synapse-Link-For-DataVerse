@@ -96,12 +96,12 @@ Following resources are deployed with this template along with some RBAC role as
      - Lead
      - Opportunity
 7. On completion the selected tables should show up as synced.
-8. Same tables can be seen and accessed thorough Synapse workspace.
+8. Same tables can be seen and accessed thorough Synapse workspace. On the left panel click Data and then Lake Database
 
 
 ![Configure-Link](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/Configure_DV_Link.gif)
 
-# Contents in Draft Mode below this
+# Contents in Draft below this
 
 - Now to trigger the pipeline, click 'Add trigger' at the top panel and click 'Trigger now'.
 - Confirm the pipeline parameters' values and click 'Ok'.
