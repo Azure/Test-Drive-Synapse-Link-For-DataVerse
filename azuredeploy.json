@@ -515,7 +515,7 @@
         "autoScale": {
           "enabled": true,
           "minNodeCount": 3,
-          "maxNodeCount": 40
+          "maxNodeCount": 25
         },
         "autoPause": {
           "enabled": true,
