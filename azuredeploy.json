@@ -162,7 +162,7 @@
     },
     "ResumeTime": {
       "type": "string",
-      "defaultValue": "09:00 PM ( 21:00 )",
+      "defaultValue": "09:00 AM (  9:00 )",
       "allowedValues": [
         "12:00 AM (  0:00 )",
         "01:00 AM (  1:00 )",
