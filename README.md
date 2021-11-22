@@ -7,7 +7,7 @@ If you are an internal Microsoft employee, you must complete the prerequisites i
 
 Owner role (or Contributor roles) for the Azure Subscription is required to deploy the template. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept. Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for RBAC role-assignments.
 
-Following Resource Providers are required to be registered if they are not already in the subscription this package is deployed.[How To Register RP](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types).
+Following Resource Providers are required to be registered if they are not already in the subscription this package is deployed. [How To Register RP](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types).
 
 - Microsoft.KeyVault
 - Microsoft.Synapse
