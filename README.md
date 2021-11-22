@@ -84,18 +84,19 @@ Following resources are deployed with this template along with some RBAC role as
 ![PostDeployment-1](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/1.gif)
 
 #### 4A-Configuring Synapse Link for Dataverse
-1. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
-2. In the top right corner, select the **Environment** to open a right pane with all the environments.
-3. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
-4. Select **+ New link** and check "Connect to Your Azure Synapse Analytics Workspace"
-5. Select Subscription,Resource Group and Storage account the package was deployed in previous deployment step.Click Next.
-6. Select the following tables to be exported through Synapse Link and click Save.
+1. Before starting with these steps wait around 5-10 mins after ARM template deployment. This allows Azure resources to sync up properly for the Power Platform.
+2. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
+3. In the top right corner, select the **Environment** to open a right pane with all the environments.
+4. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
+5. Select **+ New link** and check "Connect to Your Azure Synapse Analytics Workspace"
+6. Select Subscription,Resource Group and Storage account the package was deployed in previous deployment step.Click Next.
+7. Select the following tables to be exported through Synapse Link and click Save.
      - Account
      - Contact
      - Lead
      - Opportunity
-7. On completion the selected tables should show up as synced.
-8. Same tables can be seen and accessed thorough Synapse workspace. On the left panel click Data and then Lake Database
+8. On completion the selected tables should show up as synced.
+9. Same tables can be seen and accessed thorough Synapse workspace. On the left panel click Data and then Lake Database
 
 
 ![Configure-Link](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/Configure_DV_Link.gif)
