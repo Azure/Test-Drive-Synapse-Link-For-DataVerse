@@ -40,13 +40,13 @@ Owner role (or Contributor roles) for the Azure Subscription is required to depl
      - Resource group (create new)
      - Region
      - Company Tla
-     - Option (true or false) for Allow All Connections - Firewall to allow/deny connection to Synapse SQL 
-     - Option (true or false) for Spark Deployment - Synapse Spark pool, required for this pacakage
-     - Spark Node Size (Small, Medium, large) if Spark Deployment is set to true.Recomended "Small"
+     - Option (true or false) for Allow All Connections - *Firewall to allow/deny connection to Synapse SQL*
+     - Option (true or false) for Spark Deployment - *Synapse Spark pool, required for this pacakage*
+     - Spark Node Size (Small, Medium, large) *if Spark Deployment is set to true.Recomended "Small"*
      - Sql Administrator Login
      - Sql Administrator Login Password
      - Sku 
-     - Option (true or false) for Metadata Sync - Serverless SQL pool can automatically synchronize metadata from Apache Spark
+     - Option (true or false) for Metadata Sync - *Serverless SQL pool can automatically synchronize metadata from Apache Spark*
      - Frequency
      - Time Zone
      - Resume Time
