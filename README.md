@@ -58,12 +58,12 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
    - On successful validation, click 'Create'.
 
 #### 3A-Azure Services being deployed
-This template deploys necessary resources to run an Azure Synapse Proof-of-Concept. 
-Following resources are deployed with this template along with some RBAC role assignments:
+This template deploys necessary resources to run an Azure Synapse Analytics link for Dataverse Proof-of-Concept. 
+Following resources are deployed with this template:
 
 - An Azure Synapse Workspace 
 - An Azure Synapse SQL Pool
-- An optional Apache Spark Pool
+- Apache Spark Pool
 - Azure Data Lake Storage Gen2 account
 - A new File System inside the Storage Account to be used by Azure Synapse
 - A Logic App to Pause the SQL Pool at defined schedule
@@ -88,7 +88,7 @@ Following resources are deployed with this template along with some RBAC role as
 1. Before starting with these steps wait around 5-10 mins after ARM template deployment. This allows Azure resources to sync up properly for the Power Platform.
 2. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
 3. In the top right corner, select the **Environment** to open a right pane with all the environments.
-4. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** from the left navigation pane.
+4. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** or if you see **Data**>**Azure Synapse Link** from the left navigation pane.
 5. Select **+ New link** and check "Connect to Your Azure Synapse Analytics Workspace"
 6. Select Subscription,Resource Group and Storage account the package was deployed in previous deployment step.Click Next.
 7. Select the following tables to be exported through Synapse Link and click Save.
