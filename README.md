@@ -79,7 +79,7 @@ Following resources are deployed with this template along with some RBAC role as
 4. Click on the newly deployed Synapse workspace.
 5. Click on link 'Open' inside the box labelled as 'Open Synapse Studio'.
 6. Click on 'Log into Github' after workspace is opened. Provide your credentials for the github account holding the forked out repository.
-7. After logging in into your github account, click on 'Integrate' icon in the left panel. A blade will appear from right side of the screen.
+7. After logging in into your github account, click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from right side of the screen.
 8. Make sure that 'main' branch is selected as 'Working branch' and click 'Save'.
 
 ![PostDeployment-1](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/1.gif)
