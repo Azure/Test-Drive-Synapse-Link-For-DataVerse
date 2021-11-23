@@ -8,7 +8,7 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
 2-Owner role (or Contributor roles) for the Azure Subscription is required to deploy the template. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept.[How To Assign Azure Role](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal?tabs=current).Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for more details on RBAC role-assignments.
 
 
-3-Following Resource Providers are required to be registered if they are not already in the subscription this package is deployed. [How To Register RP](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types).
+3-Following Resource Providers are required to be registered if they are not already in the subscription this package is deployed. [How To Register Resource Provider](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types).
 
 - Microsoft.KeyVault
 - Microsoft.Synapse
