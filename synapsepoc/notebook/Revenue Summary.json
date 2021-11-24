@@ -1,0 +1,239 @@
+{
+	"name": "Revenue Summary",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "ws1sparkpool1",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "c53947bd-3c97-4680-9f4b-565a38e97a61"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/f446365a-c056-416c-bec6-57b86fdac1b4/resourceGroups/syn1115-02/providers/Microsoft.Synapse/workspaces/dvrtb76l3m6uqqu4pocws1/bigDataPools/ws1sparkpool1",
+				"name": "ws1sparkpool1",
+				"type": "Spark",
+				"endpoint": "https://dvrtb76l3m6uqqu4pocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool1",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 5,
+				"cores": 4,
+				"memory": 28,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"USE dataverse_salestrial_unqb032d835bab8474f8813337f0e197"
+				],
+				"execution_count": 1
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"<h1>Identify revenue distribution from leads, opportunities, and accounts with matplotlib.</h1>"
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					}
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"import pandas as pd\r\n",
+					"import matplotlib.pyplot as plt\r\n",
+					"#Get the Data\r\n",
+					"df = spark.sql(\"\"\"\r\n",
+					"    SELECT revenue, 'account' as source FROM account UNION\r\n",
+					"    SELECT revenue, 'lead' as source FROM lead UNION \r\n",
+					"    SELECT totalamount_base, 'opportunity' as source FROM opportunity\r\n",
+					"\"\"\")\r\n",
+					"#Summarize the Data\r\n",
+					"pdf = df.toPandas()\r\n",
+					"revenue_data = pdf.groupby(\"source\")[[\"revenue\"]].sum()\r\n",
+					"#Format the Plot\r\n",
+					"my_colors = ['green','red', 'yellow']\r\n",
+					"\r\n",
+					"plt.pie(revenue_data[\"revenue\"], labels = revenue_data.index, autopct = '%1.1f%%', colors = my_colors)\r\n",
+					"plt.show()"
+				],
+				"execution_count": 2
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"<h1>Display potential revenue from leads and opportunities on a quarterly basis.</h1>"
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					}
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"import pandas as pd\r\n",
+					"import matplotlib.pyplot as plt\r\n",
+					"#Get the Leads Data\r\n",
+					"df = spark.sql(\"\"\"\r\n",
+					"    SELECT revenue, purchasetimeframe, 'lead' as source FROM lead\r\n",
+					"\"\"\")\r\n",
+					"#Summarize the Data\r\n",
+					"pdf = df.toPandas()\r\n",
+					"data = pdf.groupby(['purchasetimeframe'])[['revenue']].sum()\r\n",
+					"\r\n",
+					"plt.bar(data.index, data[\"revenue\"], color = \"blue\", label = \"Lead\")\r\n",
+					"#Get the Opportunity Data\r\n",
+					"df = spark.sql(\"\"\"\r\n",
+					"    SELECT totalamount_base, purchasetimeframe, 'opportunity' as source FROM opportunity\r\n",
+					"\"\"\")\r\n",
+					"#Summairze the Data\r\n",
+					"pdf = df.toPandas()\r\n",
+					"data = pdf.groupby([\"purchasetimeframe\"])[[\"totalamount_base\"]].sum()\r\n",
+					"\r\n",
+					"plt.bar(data.index, data[\"totalamount_base\"], color = \"orange\", label = \"Opportunity\")\r\n",
+					"#Format the Plot\r\n",
+					"plt.xticks(ticks=[-1, 0, 1, 2, 3, 4], labels=[\"\", \"Q1\", \"Q2\", \"Q3\", \"Q4\", \"This Year\"])\r\n",
+					"plt.yticks(ticks= [0.e+00, 2.e+07, 4.e+07, 6.e+07, 8.e+07, 1.e+08], labels=[\"$0\", \"$20M\", \"$40M\", \"$60M\", \"$80M\", \"$100M\"])\r\n",
+					"plt.legend()\r\n",
+					"plt.show()"
+				],
+				"execution_count": 3
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"<h1>Identify the contact information for each account by joining the Dataverse tables into a new Spark Table</h1>"
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"#Join Datasets\r\n",
+					"df = spark.sql(\"\"\"\r\n",
+					" SELECT a.Id AS account_ID, a.name AS account_name, b.fullname AS contact_name, b.emailaddress1 AS contact_email, b.donotemail\r\n",
+					" FROM\r\n",
+					" dataverse_salestrial_unqb032d835bab8474f8813337f0e197.account a\r\n",
+					" INNER JOIN\r\n",
+					" (\r\n",
+					"     SELECT parentcustomerid, fullname, emailaddress1, donotemail\r\n",
+					"     FROM \r\n",
+					"     dataverse_salestrial_unqb032d835bab8474f8813337f0e197.contact\r\n",
+					") b\r\n",
+					"ON a.Id = b.parentcustomerid\r\n",
+					"\"\"\")\r\n",
+					"\r\n",
+					"#Write Joined Dataset to Spark Table\r\n",
+					"df.write.mode(\"overwrite\").saveAsTable(\"default.AccountEmails\")\r\n",
+					"\r\n",
+					"#Read the Spark Table\r\n",
+					"display(df)"
+				],
+				"execution_count": 4
+			}
+		]
+	}
+}
