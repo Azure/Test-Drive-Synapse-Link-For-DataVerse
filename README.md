@@ -106,48 +106,9 @@ Following resources are deployed with this template:
 ![DV_Syn_Tbl](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/DV_Syn_Tables.gif)
 
 
-# Contents in Draft below this
-
-- To run the notebook (if spark pool is deployed), click on 'Develop' tab on the left panel.
-- Now under 'Notebooks' dropdown on left side of screen, click the notebook named 'Data Exploration and ML Modeling - NYC taxi predict using Spark MLlib'.
-- Click 'Run all' to run the notebook. (It might take a few minutes to start the session)
-
-![PostDeployment-5](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/6.gif)
-
-- Once published all the resources will now be available in the live mode.
-- To switch to the live mode from git mode, click the drop down at top left corner and select 'Switch to live mode'.
-
-![PostDeployment-6](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/liveMode.PNG)
-
-## Steps for PowerBI integration
-
-**Pre-requisites**
-
-PowerBI workspace created. Please note that you can’t use default workspace (‘My workspace’). create a new PBI workspace or use any other workspace other than ‘My workspace’.
-
-Create PowerBI workspace --> https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-create-the-new-workspaces
-
-**Link Azure Synapse workspace to PowerBI workspace**
-
-- In Synapse workspace, go to Manage --> Linked Services.
-- Click on PowerBIWorkspaceTripsFares linked service
-- From the drop down list, select your PowerBI workspace and Save and publish.
-
-![20211014134407](https://user-images.githubusercontent.com/88354448/137524650-9d066921-d057-4a08-8d55-4f8c02eb3690.gif)
-
-- Download [NYCTaxiCabTripAndFare.pbit] (https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/tree/main/synapsepoc/PowerBITemplate/NYCTaxiCabTripAndFare.pbit) from PowerBITemplate folder
-- Provide ServerName, DatabaseName and login credentials. ServerName and DatabaseName can be found in connection strings.
-- To get the connection string, click on Dedicated SQL Pool
-- On the left hand side menu, click on connection strings
-- Copy ServerName and DatabaseName from connection string, paste them in PowerBI and click on 'Load'.
-- Select 'Database' (instead of default 'Windows') and provide User name,  Password and click on 'Connect'
-
-![20211014140340](https://user-images.githubusercontent.com/88354448/137524802-c720137f-9f9c-4c84-93b9-35c5ef0ce759.gif)
-
-- Change the sensitivity level to 'Public' and **save** the dashboard. 
-- Publish the dashboard to the PowerBI workspace you have created by clicking on 'Publish' and selecting the workspace.
-- In Synapse workspage navigate to Develop --> PowerBI --> Refresh.
-- You see the PowerBI report in Synapse you had published in PowerBI workspace.
-
-![20211014144422](https://user-images.githubusercontent.com/88354448/137524861-ac32c4dc-856f-41e9-8f01-8dfa0cc7baae.gif)
-
+#### 4B-Synapse Studio Notebook Execution using Dataverse Tables
+3. Click on the newly deployed Synapse workspace.
+4. Click on link 'Open' inside the box labelled as 'Open Synapse Studio'.
+6. Click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from right side of the screen.
+7. Select the Notebook 'Revenue Summary'.
+8. Follow the instruction within the Notebook to procedd with execution.
