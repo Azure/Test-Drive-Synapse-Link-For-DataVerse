@@ -1,4 +1,4 @@
-## Azure Synapse Link For Dataverse POC environment Setup
+## Azure Synapse Link For Dataverse POC Environment Setup
 This deployment package allows the user to deploy a Proof-of-Concept environment of Azure Synapse Analytics link for Dataverse with spark notebook to (ingest, merge, aggregate and transform) dataset.
 
 ## 1-Prerequisites
