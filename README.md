@@ -24,10 +24,10 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
 ![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/ppac-video.gif)
 
 ## 3-Deployment Steps
-1.  ## Fork Out [This GitHub Repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse) into your github account. 
+1.  ## Fork Out [This GitHub Repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse) into your GitHub account. 
     
    **If you don't fork repo:** 
-   + **The pre-populated dataset, pipeline and notebook will not be deployed**
+   + **The spark notebook will not be deployed**
    + **You will get a Github publishing error**
    
   <!--  ![Fork](https://raw.githubusercontent.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/main/images/4.gif) -->
