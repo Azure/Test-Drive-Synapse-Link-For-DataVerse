@@ -82,7 +82,7 @@ Following resources are deployed with this template:
 7. After logging in into your github account, click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from right side of the screen.
 8. Make sure that 'main' branch is selected as 'Working branch' and click 'Save'.
 
-![PostDeployment-1](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/1.gif)
+![PostDeployment-1](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/Starting_WS.gif)
 
 #### 4A-Configuring Synapse Link for Dataverse
 1. Before starting with these steps wait around 5-10 mins after ARM template deployment. This allows Azure resources to sync up properly for the Power Platform.
