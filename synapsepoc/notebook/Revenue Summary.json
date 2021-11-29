@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "c53947bd-3c97-4680-9f4b-565a38e97a61"
+				"spark.autotune.trackingId": "53ca1c58-6154-47b5-8cef-9cee4f33e294"
 			}
 		},
 		"metadata": {
@@ -49,6 +49,22 @@
 		},
 		"cells": [
 			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"<h1>Update the Databasename with your Dataverse Databasename.</h1>\r\n",
+					"<img src=\"https://synapse1poc.blob.core.windows.net/dataverselnksynp/Dataverse_DB.gif\" alt=\"Surface Device\" width=\"75%\"/>\r\n",
+					"\r\n",
+					"\t"
+				]
+			},
+			{
 				"cell_type": "code",
 				"metadata": {
 					"jupyter": {
@@ -67,9 +83,9 @@
 				},
 				"source": [
 					"%%sql\r\n",
-					"USE dataverse_salestrial_unqb032d835bab8474f8813337f0e197"
+					"USE  <Databasename>"
 				],
-				"execution_count": 1
+				"execution_count": 2
 			},
 			{
 				"cell_type": "markdown",
@@ -81,7 +97,9 @@
 					}
 				},
 				"source": [
-					"<h1>Identify revenue distribution from leads, opportunities, and accounts with matplotlib.</h1>"
+					"<h1>Identify revenue distribution from leads, opportunities, and accounts with matplotlib.</h1>\r\n",
+					"\r\n",
+					"<img src=\"https://synapse1poc.blob.core.windows.net/dataverselnksynp/RS_loa.png\" alt=\"Surface Device\" width=\"75%\"/>"
 				]
 			},
 			{
@@ -119,7 +137,7 @@
 					"plt.pie(revenue_data[\"revenue\"], labels = revenue_data.index, autopct = '%1.1f%%', colors = my_colors)\r\n",
 					"plt.show()"
 				],
-				"execution_count": 2
+				"execution_count": 3
 			},
 			{
 				"cell_type": "markdown",
@@ -131,7 +149,9 @@
 					}
 				},
 				"source": [
-					"<h1>Display potential revenue from leads and opportunities on a quarterly basis.</h1>"
+					"<h1>Display potential revenue from leads and opportunities on a quarterly basis.</h1>\r\n",
+					"\r\n",
+					"<img src=\"https://synapse1poc.blob.core.windows.net/dataverselnksynp/RS_qb.png\" alt=\"Surface Device\" width=\"75%\"/>"
 				]
 			},
 			{
@@ -178,7 +198,7 @@
 					"plt.legend()\r\n",
 					"plt.show()"
 				],
-				"execution_count": 3
+				"execution_count": 4
 			},
 			{
 				"cell_type": "markdown",
@@ -232,7 +252,7 @@
 					"#Read the Spark Table\r\n",
 					"display(df)"
 				],
-				"execution_count": 4
+				"execution_count": 5
 			}
 		]
 	}

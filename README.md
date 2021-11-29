@@ -14,23 +14,23 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
 2. Select **Try for free** for *Dynamics 365 Sales*.
 3. Enter your work or school email and select **Start your free trial**.For Internal Microsoft its the email from the prerequisite step.
 
-![D365](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/d365-trial.gif)
+![D365](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/d365-trial.gif)
 
 4. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
 5. In the top right corner, select the **Environment** to open a right pane with all the environments.
 6. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** or if you see **Data**>**Azure Synapse Link**  from the left navigation pane.
 7. Select **+ New link** and make note of the region required for deploying the Azure resources in the next steps.
 
-![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/ppac-video.gif)
+![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/ppac-video.gif)
 
 ## 3-Deployment Steps
-1.  ## Fork Out [This GitHub Repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click) into your github account. 
+1.  ## Fork Out [This GitHub Repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse) into your github account. 
     
    **If you don't fork repo:** 
    + **The pre-populated dataset, pipeline and notebook will not be deployed**
    + **You will get a Github publishing error**
    
-  <!--  ![Fork](https://raw.githubusercontent.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/main/images/4.gif) -->
+  <!--  ![Fork](https://raw.githubusercontent.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/main/images/4.gif) -->
  
 2. Click 'Deploy To Azure' button given below to deploy Synapse Workspace with SQL and Spark Pool.
 
@@ -52,7 +52,7 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
      - Time Zone
      - Resume Time
      - Pause Time
-     - Github Username (username for the account where [this github repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click) was forked out into)
+     - Github Username (username for the account where [this github repository](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse) was forked out into)
 
    - Click 'Review + Create'.
    - On successful validation, click 'Create'.
@@ -82,7 +82,7 @@ Following resources are deployed with this template:
 7. After logging in into your github account, click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from right side of the screen.
 8. Make sure that 'main' branch is selected as 'Working branch' and click 'Save'.
 
-![PostDeployment-1](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/1.gif)
+![PostDeployment-1](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/1.gif)
 
 #### 4A-Configuring Synapse Link for Dataverse
 1. Before starting with these steps wait around 5-10 mins after ARM template deployment. This allows Azure resources to sync up properly for the Power Platform.
@@ -100,7 +100,7 @@ Following resources are deployed with this template:
 9. Same tables can be seen and accessed thorough Synapse workspace. On the left panel click Data and then Lake Database
 
 
-![Configure-Link](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/Configure_DV_Link.gif)
+![Configure-Link](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/Configure_DV_Link.gif)
 
 # Contents in Draft below this
 
@@ -108,12 +108,12 @@ Following resources are deployed with this template:
 - Now under 'Notebooks' dropdown on left side of screen, click the notebook named 'Data Exploration and ML Modeling - NYC taxi predict using Spark MLlib'.
 - Click 'Run all' to run the notebook. (It might take a few minutes to start the session)
 
-![PostDeployment-5](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/6.gif)
+![PostDeployment-5](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/6.gif)
 
 - Once published all the resources will now be available in the live mode.
 - To switch to the live mode from git mode, click the drop down at top left corner and select 'Switch to live mode'.
 
-![PostDeployment-6](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/blob/main/images/liveMode.PNG)
+![PostDeployment-6](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/liveMode.PNG)
 
 ## Steps for PowerBI integration
 
@@ -131,7 +131,7 @@ Create PowerBI workspace --> https://docs.microsoft.com/en-us/power-bi/collabora
 
 ![20211014134407](https://user-images.githubusercontent.com/88354448/137524650-9d066921-d057-4a08-8d55-4f8c02eb3690.gif)
 
-- Download [NYCTaxiCabTripAndFare.pbit] (https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse-With-1-Click/tree/main/synapsepoc/PowerBITemplate/NYCTaxiCabTripAndFare.pbit) from PowerBITemplate folder
+- Download [NYCTaxiCabTripAndFare.pbit] (https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/tree/main/synapsepoc/PowerBITemplate/NYCTaxiCabTripAndFare.pbit) from PowerBITemplate folder
 - Provide ServerName, DatabaseName and login credentials. ServerName and DatabaseName can be found in connection strings.
 - To get the connection string, click on Dedicated SQL Pool
 - On the left hand side menu, click on connection strings

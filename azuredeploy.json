@@ -425,7 +425,7 @@
           "type": "WorkspaceGitHubConfiguration",
           "hostName": "https://github.com",
           "accountName": "[parameters('githubUsername')]",
-          "repositoryName": "Test-Drive-Synapse-Link-For-DataVerse-With-1-Click",
+          "repositoryName": "Test-Drive-Synapse-Link-For-DataVerse",
           "rootFolder": "/synapsepoc",
           "collaborationBranch": "main"
         }
