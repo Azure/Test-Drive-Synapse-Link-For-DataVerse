@@ -102,6 +102,7 @@ Following resources are deployed with this template:
 
 ![Configure-Link](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/Configure_DV_Link.gif)
 
+
 ![DV_Syn_Tbl](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/DV_Syn_Tables.gif)
 
 
