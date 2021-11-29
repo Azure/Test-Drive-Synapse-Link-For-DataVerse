@@ -77,7 +77,7 @@ Following resources are deployed with this template:
 2. After the deployment is complete, click 'Go to resource group'.
 3. You'll see all the resources deployed in the resource group.
 4. Click on the newly deployed Synapse workspace.
-5. Click on link 'Open' inside the box labelled as 'Open Synapse Studio'.
+5. Click on link 'Open' inside the box labeled as 'Open Synapse Studio'.
 6. Click on 'Log into Github' after workspace is opened. Provide your credentials for the github account holding the forked out repository.
 7. After logging in into your github account, click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from right side of the screen.
 8. Make sure that 'main' branch is selected as 'Working branch' and click 'Save'.
@@ -108,9 +108,9 @@ Following resources are deployed with this template:
 
 #### 4B-Synapse Studio Notebook Execution using Dataverse Tables
 3. Click on the newly deployed Synapse workspace.
-4. Click on link 'Open' inside the box labelled as 'Open Synapse Studio'.
-6. Click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from right side of the screen.
+4. Click on link 'Open' inside the box labeled as 'Open Synapse Studio'.
+6. Click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from the right side of the screen.
 7. Select the Notebook 'Revenue Summary'.
-8. Follow the instruction within the Notebook to procedd with execution.
+8. Follow the instruction within the Notebook to proceed with the further execution steps.
 
 ![NB_Executionl](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/NB_Execution.gif)
