@@ -112,3 +112,5 @@ Following resources are deployed with this template:
 6. Click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from right side of the screen.
 7. Select the Notebook 'Revenue Summary'.
 8. Follow the instruction within the Notebook to procedd with execution.
+
+![NB_Executionl](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/NB_Execution.gif)
