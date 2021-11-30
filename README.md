@@ -39,7 +39,7 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
    - Provide the values for:
 
      - Resource group (create new)
-     - Region
+     - Region - *Same Region where Dynamics 365 trial was deployed.Follow instructions in Step 2 to find the Region *
      - Company Tla - *Any three Characters to keep the Azure resource names unique*
      - Option (true or false) for Allow All Connections - *Firewall to allow/deny connection to Synapse SQL*
      - Option (true or false) for Spark Deployment - *Synapse Spark pool, Select "True" for this pacakage deployment*
