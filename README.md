@@ -107,10 +107,10 @@ Following resources are deployed with this template:
 
 
 #### 4B-Synapse Studio Notebook Execution using Dataverse Tables
-3. Click on the newly deployed Synapse workspace.
-4. Click on link 'Open' inside the box labeled as 'Open Synapse Studio'.
-6. Click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from the right side of the screen.
-7. Select the Notebook 'Revenue Summary'.
-8. Follow the instruction within the Notebook to proceed with the further execution steps.
+1. Click on the newly deployed Synapse workspace.
+2. Click on link 'Open' inside the box labeled as 'Open Synapse Studio'.
+3. Click on 'Develop' icon in the left panel and then Select 'Notebooks'. A blade will appear from the right side of the screen.
+4. Select the Notebook 'Revenue Summary'.
+5. Follow the instruction within the Notebook to proceed with the further execution steps.
 
 ![NB_Executionl](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/NB_Execution.gif)
