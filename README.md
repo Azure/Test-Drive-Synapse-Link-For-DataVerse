@@ -8,7 +8,7 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
 2-Owner role (or Contributor roles) for the Azure Subscription is required to deploy the template. This is for creation of a separate Proof-of-Concept Resource Group and to delegate roles necessary for this proof of concept.[How To Assign Azure Role](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal?tabs=current).Refer to this [official documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps) for more details on RBAC role-assignments.
 
 
-## 2-Access a Dynamics Trial Environment
+## 2-Access a Dynamics Trial Environment to Check the Region
 
 1. Navigate to the [Dynamics 365 Trial Site](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/).
 2. Select **Try for free** for *Dynamics 365 Sales*.
