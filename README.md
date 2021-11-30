@@ -19,7 +19,7 @@ This deployment package allows the user to deploy a Proof-of-Concept environment
 4. Open a new tab and navigate to the [Power Platform Maker Portal](https://make.preview.powerapps.com/).
 5. In the top right corner, select the **Environment** to open a right pane with all the environments.
 6. Select **Sales Trial** from the list and then select **Dataverse**>**Azure Synapse Link** or if you see **Data**>**Azure Synapse Link**  from the left navigation pane.
-7. Select **+ New link** and make note of the region required for deploying the Azure resources in the next steps.
+7. Select **+ New link** and **Make Note of the Region** required for deploying the Azure resources in the next steps.
 
 ![PPMP](https://github.com/Azure/Test-Drive-Synapse-Link-For-DataVerse/blob/main/images/ppac-video.gif)
 
